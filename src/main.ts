@@ -9,5 +9,6 @@ async function bootstrap() {
     forbidNonWhitelisted:true,//it will throw an error if any extra fields are present
   }))
   await app.listen(process.env.PORT ?? 3000);
+  app.enableShutdownHooks();//to enable shutdown hooks like onApplicationShutdown
 }
 bootstrap();
