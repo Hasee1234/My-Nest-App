@@ -10,6 +10,6 @@ import { IsInt, IsString } from "class-validator";
 export class createCustomerDto{
     @IsString()
     name:string;//these validation dont work  at run time
-    @IsInt()//so we use these pipe validation in main.ts file to use globally
+    @IsInt()//so we use these class validator pipe validation in main.ts file to use globally
     age:number;
 }
